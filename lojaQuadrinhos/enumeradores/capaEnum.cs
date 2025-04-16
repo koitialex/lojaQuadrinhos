@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace lojaQuadrinhos
+namespace lojaQuadrinhos.enumeradores
 {
-    public abstract class Manga : Revista
+    public enum capaEnum
     {
-       public void Manga()
-        {
-
-        }
+        Dura,
+        paperback,
+        Sobrecapa
     }
 }

@@ -9,27 +9,64 @@ namespace lojaQuadrinhos.entidades
 {
     public class Quadrinho : Revista
     {
-        public Quadrinho(QuadrinhosEnum marca, )
+        public double PrecoCapa { get; set; }
+        public double PrecoCor { get; set; }
+        public Quadrinho(QuadrinhosEnum marca,capaEnum capa, TipoArteEnum cor)
         {
             Marca = marca;
+            Capa = capa;
+            Cor = cor;
+            PrecoCapa = ValorCapa();
+            ValorColorido();
+            Preco = PrecoCapa + PrecoCor;
 
         }
-        public double CalcularPreco(double valor)
+        public double ValorCapa()
+        {
+            double precoCapa = 0;
+            switch (Capa)
+            {
+                case capaEnum.Dura:
+                    precoCapa = 10.00;
+                    break;
+                case capaEnum.paperback:
+                    precoCapa = 4.00;
+                    break;
+                case capaEnum.Sobrecapa:
+                    precoCapa = 3.00;
+                    break;
+
+            }
+            return precoCapa;
+        }
+        public void ValorColorido()
+        {
+            switch(Cor)
+            {
+                case TipoArteEnum.Colorido:
+                    PrecoCor = 7.00;
+                    break;
+                case TipoArteEnum.PretoeBranco:
+                    PrecoCor = 2.50;
+                    break;
+            }
+        }
+        public double CalcularPreco(double preco)
         {
             switch(Marca)
             {
                 case QuadrinhosEnum.marvel:
-                    valor = 20.50;
+                    preco = 3.70;
                     break;
                 case QuadrinhosEnum.dc:
-                    valor = 19.20;
+                    preco = 3.70;
                     break;
                 case QuadrinhosEnum.blackhorse:
-                    valor = 14.99;
+                    preco = 1.99;
                     break;
                 
             }
-            return;
+            return preco;
         }
     }
 }

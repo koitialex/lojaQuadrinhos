@@ -9,9 +9,9 @@ namespace lojaQuadrinhos
 {
     public abstract class Revista
     {
-        public string franquia { get; set; }
-        public double valor { get; set; }
-        public bool capa {  get; set; }
+        public TipoArteEnum Cor { get; set; }
+        public double Preco { get; set; }
+        public capaEnum Capa {  get; set; }
         public QuadrinhosEnum Marca { get; set; }
 
     };
