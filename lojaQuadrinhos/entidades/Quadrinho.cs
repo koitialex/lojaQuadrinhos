@@ -9,16 +9,14 @@ namespace lojaQuadrinhos.entidades
 {
     public class Quadrinho : Revista
     {
-        public double PrecoCapa { get; set; }
-        public double PrecoCor { get; set; }
+
         public Quadrinho(QuadrinhosEnum marca,capaEnum capa, TipoArteEnum cor)
         {
             Marca = marca;
-            Capa = capa;
-            Cor = cor;
+
             PrecoCapa = ValorCapa();
             ValorColorido();
-            Preco = PrecoCapa + PrecoCor;
+            Preco = PrecoCapa + PrecoCor + CalcularPreco(Marca);
 
         }
         public double ValorCapa()
@@ -41,7 +39,7 @@ namespace lojaQuadrinhos.entidades
         }
         public void ValorColorido()
         {
-            switch(Cor)
+            switch(Arte)
             {
                 case TipoArteEnum.Colorido:
                     PrecoCor = 7.00;
@@ -68,5 +66,6 @@ namespace lojaQuadrinhos.entidades
             }
             return preco;
         }
+        
     }
 }
