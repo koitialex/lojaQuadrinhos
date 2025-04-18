@@ -19,34 +19,53 @@ namespace lojaQuadrinhos
 
         private double CalcularPrecoCapa()
         {
-            return Capa switch
+            double precoCapa = 0;
+            switch (Capa)
             {
-                capaEnum.Dura => 9.50,
-                capaEnum.paperback => 3.50,
-                capaEnum.Sobrecapa => 2.00,
-
-            };
+                case capaEnum.Dura:
+                    precoCapa = 9.50;
+                    break;
+                case capaEnum.paperback:
+                    precoCapa = 3.50;
+                    break;
+                case capaEnum.Sobrecapa:
+                    precoCapa = 2.00;
+                    break;
+            }
+            return precoCapa;
         }
 
         private double CalcularPrecoArte()
         {
-            return Arte switch
+            double precoArte = 0;
+            switch (Arte)
             {
-                TipoArteEnum.Colorido => 6.00,
-                TipoArteEnum.PretoeBranco => 3.00,
-
-            };
+                case TipoArteEnum.Colorido:
+                    precoArte = 6.00;
+                    break;
+                case TipoArteEnum.PretoeBranco:
+                    precoArte = 3.00;
+                    break;
+            }
+            return precoArte;
         }
 
         private double CalcularPrecoTitulo()
         {
-            return Titulo switch
+            double precoTitulo = 0;
+            switch (Titulo)
             {
-                MangaEnum.FullMetalAlchemist => 4.90,
-                MangaEnum.SousouNoFrieren => 5.40,
-                MangaEnum.ShingekiNoKyojin => 6.00,
-
-            };
+                case MangaEnum.FullMetalAlchemist:
+                    precoTitulo = 4.90;
+                    break;
+                case MangaEnum.SousouNoFrieren:
+                    precoTitulo = 5.40;
+                    break;
+                case MangaEnum.ShingekiNoKyojin:
+                    precoTitulo = 6.00;
+                    break;
+            }
+            return precoTitulo;
         }
 
     }
