@@ -10,12 +10,6 @@ namespace lojaQuadrinhos.utilidades
     public class calculos
     {
        
-        public static double CalcularPreco(double preco,double precofinal)
-        {
-           
-            precofinal = preco * Capa 
-
-            
-        }
+        
     }
 }

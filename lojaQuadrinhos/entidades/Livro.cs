@@ -19,7 +19,8 @@ namespace lojaQuadrinhos
 
             PrecoCapa = CalcularPrecoCapa();
             PrecoCor = CalcularPrecoArte();
-            Preco = PrecoCapa + PrecoCor + CalcularPrecoTitulo();
+            PrecoMarca = CalcularPrecoTitulo();
+            Preco = PrecoCapa + PrecoCor + PrecoMarca;
         }
 
         private double CalcularPrecoCapa()

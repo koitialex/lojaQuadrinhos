@@ -13,6 +13,7 @@ namespace lojaQuadrinhos
         public TipoArteEnum Arte { get; set; }
         public double PrecoCapa { get; set; }
         public double PrecoCor { get; set; }
+        public double PrecoMarca { get; set; }
         public double Preco { get; set; }
     
         public QuadrinhosEnum Marca { get; set; }

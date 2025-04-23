@@ -18,10 +18,8 @@ namespace lojaQuadrinhos.entidades
 
             PrecoCapa = ValorCapa();
             PrecoCor = ValorColorido();
-            Marca = CalcularPreco();
-            Preco = PrecoCapa + PrecoCor + Marca;
-
-
+            PrecoMarca = CalcularPrecoMarca();
+            Preco = PrecoCapa + PrecoCor + PrecoMarca;
 
         }
         public double ValorCapa()
@@ -56,7 +54,7 @@ namespace lojaQuadrinhos.entidades
             }
             return precoCor;
         }
-        public double CalcularPreco()
+        public double CalcularPrecoMarca()
         {
             double precoMarca = 0;
             switch(Marca)

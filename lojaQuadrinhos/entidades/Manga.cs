@@ -14,10 +14,11 @@ namespace lojaQuadrinhos
 
             PrecoCapa = CalcularPrecoCapa();
             PrecoCor = CalcularPrecoArte();
-            Preco = PrecoCapa + PrecoCor + CalcularPrecoTitulo();
+            PrecoMarca = CalcularPrecoTitulo();
+            Preco = PrecoCapa + PrecoCor + PrecoMarca;
         }
 
-        private double CalcularPrecoCapa()
+        public double CalcularPrecoCapa()
         {
             double precoCapa = 0;
             switch (Capa)
@@ -35,7 +36,7 @@ namespace lojaQuadrinhos
             return precoCapa;
         }
 
-        private double CalcularPrecoArte()
+        public double CalcularPrecoArte()
         {
             double precoArte = 0;
             switch (Arte)
@@ -50,7 +51,7 @@ namespace lojaQuadrinhos
             return precoArte;
         }
 
-        private double CalcularPrecoTitulo()
+        public double CalcularPrecoTitulo()
         {
             double precoTitulo = 0;
             switch (Titulo)
